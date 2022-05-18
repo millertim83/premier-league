@@ -208,7 +208,7 @@ function Home() {
       const leagueLeader = leagueTable.records[0];
     return (
         <div>
-            <h1>Home Page</h1>
+            <h1 className="text-uppercase">Home Page</h1>
             <p>The league leader is {leagueLeader.team}</p>
             <p>{leagueLeader.team} has {leagueLeader.points} points in {leagueLeader.played} games this season.</p>
         </div>
