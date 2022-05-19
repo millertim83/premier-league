@@ -210,7 +210,7 @@ function Home() {
     return (
         <div className="home-container">
             <h1 className="text-uppercase">Home Page</h1>
-            <div className="league-table">
+            <div className="container-sm league-table">
                 <LeagueTable leagueTable={leagueTable} />
 
             </div>
