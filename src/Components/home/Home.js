@@ -1,4 +1,5 @@
 import React from "react";
+import LeagueTable from "../LeagueTable";
 
 function Home() {
     const leagueTable = {
@@ -209,9 +210,12 @@ function Home() {
     return (
         <div className="home-container">
             <h1 className="text-uppercase">Home Page</h1>
-            <p>The league leader is {leagueLeader.team}</p>
-            <p>{leagueLeader.team} has {leagueLeader.points} points in {leagueLeader.played} games this season.</p>
+            <div className="league-table">
+                <LeagueTable leagueTable={leagueTable} />
+
+            </div>
         </div>
+
     );
 }
 
