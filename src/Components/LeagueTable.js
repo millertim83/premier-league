@@ -1,5 +1,3 @@
-import React from "react";
-
 function LeagueTable({ leagueTable }) {
     const tableRow = leagueTable.records.map(club => {
         return (

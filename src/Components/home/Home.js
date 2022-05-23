@@ -205,7 +205,7 @@ function Home() {
             }
         ]
     }
-      const leagueLeader = leagueTable.records[0];
+      
     return (
         <div className="home-container">
             <h1 className="text-uppercase">Home Page</h1>
