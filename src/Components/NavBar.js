@@ -1,4 +1,4 @@
-
+import { Link } from "react-router-dom";
 
 function NavBar() {
     return (
@@ -12,13 +12,13 @@ function NavBar() {
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav mr-auto">
                         <li className="nav-item active">
-                            <a className="nav-link text-primary" href="#">Home</a>
+                            <Link className="nav-link text-primary" to="/">Home</Link>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link text-primary" href="#">Weekly Results</a>
+                            <Link className="nav-link text-primary" to="/weeklyresults">Weekly Results</Link>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link text-primary" href="#">Scoring Leaders</a>
+                            <Link className="nav-link text-primary" to="/scoringleaders">Scoring Leaders</Link>
                         </li>
                     </ul>
                 </div>
