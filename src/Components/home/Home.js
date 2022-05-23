@@ -1,4 +1,3 @@
-import React from "react";
 import LeagueTable from "../LeagueTable";
 
 function Home() {
