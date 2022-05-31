@@ -1,7 +1,9 @@
+import { useEffect, useState } from "react";
 import LeagueTable from "../LeagueTable";
 
 function Home() {
-    const leagueTable = {
+    const [leagueTable, setLeagueTable] = useState([]);
+    const premierLeagueTable = {
         "records": [
             {
                 "team": "Manchester City",
@@ -205,12 +207,34 @@ function Home() {
             }
         ]
     }
+
+    //let leagueTable = premierLeagueTable.records;
+
+    //let tableCopy = [...LeagueTable];
+    //console.log(tableCopy);
+
+    useEffect(() => {
+        getLeagueTable()
+    }, []);
+
+    function getLeagueTable() {
+        setLeagueTable(premierLeagueTable.records);
+    }
+    let sortedTable = [...leagueTable];
+
+    /*function sortTable() {
+        let sortedTable = leagueTable.sort((a,b) => a - b);
+        console.log(`sorted table: ${sortedTable}`);
+        //need to figure out how to pick which category to sort by
+    */
       
     return (
         <div className="home-container">
             <h1 className="text-uppercase">Home Page</h1>
             <div className="container-sm league-table">
                 <LeagueTable leagueTable={leagueTable} />
+            </div>
+            <div>
 
             </div>
         </div>
@@ -221,5 +245,5 @@ function Home() {
 export default Home;
 
 /*
-    return
+    <LeagueTable leagueTable={leagueTable} />
 */

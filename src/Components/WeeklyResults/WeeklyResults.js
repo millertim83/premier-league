@@ -1,4 +1,5 @@
-import WeeklyResultsTable from "../WeeklyResultsTable.js";
+//import WeeklyResultsTable from "../WeeklyResultsTable.js";
+import RadioButton from "../RadioButton.js";
 
 function WeeklyResults() {
     const week37Results = 
@@ -252,15 +253,19 @@ function WeeklyResults() {
                 "attendance": "41.136"
             }
         ]
-    }   
+    }       
+
     return (
         <div>
-            <h1 className="text-uppercase">Weekly Results</h1>
             <div className="container-sm results-table">
-                <WeeklyResultsTable week37Results={week37Results} />
+                <RadioButton />
             </div>
+         
         </div>
     )
 }
 
 export default WeeklyResults;
+
+//<WeeklyResultsTable week37Results={week37Results} />
+

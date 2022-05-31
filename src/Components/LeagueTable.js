@@ -1,7 +1,9 @@
+//import { useState } from "react";
+
 function LeagueTable({ leagueTable }) {
-    const tableRow = leagueTable.records.map(club => {
+    const tableRow = leagueTable.map(club => {
         return (
-            <tr>
+            <tr key={club.team}>
                 <td>{club.team}</td>
                 <td>{club.played}</td>
                 <td>{club.win}</td>
@@ -13,7 +15,7 @@ function LeagueTable({ leagueTable }) {
             </tr>
         )
     })
-    
+
     return (
         <div>
             <table className="table">
@@ -37,3 +39,16 @@ function LeagueTable({ leagueTable }) {
 }
 
 export default LeagueTable;
+
+/*
+
+<button type="button" onClick={() => setSortedField("team")}></button>
+<button type="button" onClick={() => setSortedField("played")}></button>
+<button type="button" onClick={() => setSortedField("win")}></button>
+<button type="button" onClick={() => setSortedField("draw")}></button>
+<button type="button" onClick={() => setSortedField("loss")}></button>
+<button type="button" onClick={() => setSortedField("goalsFor")}></button>
+<button type="button" onClick={() => setSortedField("goalsAgainst")}></button>
+<button type="button" onClick={() => setSortedField("points")}></button>
+
+*/
